@@ -22,6 +22,10 @@ nav {
     padding: 10px 25px;
 }
 
+nav .logo {
+    margin-bottom: 7px;
+}
+
 nav .title {
     font-size: 1.5em;
     font-weight: 800;
@@ -46,6 +50,8 @@ nav ul li {
 
 nav ul li a {
     color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -54,11 +60,25 @@ nav ul li a {
 
 
 /* +++++++++++ desktop ++++++++ */
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 980px) {
+    nav .title {
+        font-size: 2em;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+    }
+
+
     nav ul::-webkit-scrollbar {
         display: block;
         height: 3px;
         width: 12px;
+        cursor: pointer;
     }
 
     nav ul::-webkit-scrollbar-track {
@@ -67,7 +87,7 @@ nav ul li a {
     }
 
     nav ul::-webkit-scrollbar-thumb {
-        background: #ecf0f1;
+        background: red;
         border-radius: 10%;
     }
 }

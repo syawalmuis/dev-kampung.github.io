@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;800&display=swap');
 
 :root {
-    --bg-color: #ecf0f1;
+    --text-color: #fff;
     --text-color: #95a5a6;
 }
 
@@ -12,18 +12,36 @@
     font-family: 'Nunito', sans-serif;
 }
 
+body {
+    min-height: 200vh;
+}
+
 
 /* +++++++++ Navbar +++++++++++ */
 nav {
-    position: relative;
+    position: fixed;
     background-color: var(--bg-color);
     color: var(--text-color);
     width: 100%;
-    padding: 10px 25px;
+    padding: 0 25px;
+    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+    box-shadow: 3px 3px 6px 1px black inset,
+        -2px -2px 1px 0px black inset,
+        0px 4px 10px 0px black;
+    /* height: 75px; */
 }
 
+/* nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    border: 0.1px solid black;
+    left: 0;
+} */
+
 nav .logo {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 nav .title {
@@ -37,6 +55,7 @@ nav ul {
     position: relative;
     width: 100%;
     overflow-x: auto;
+    margin-bottom: 5px;
 }
 
 nav ul::-webkit-scrollbar {

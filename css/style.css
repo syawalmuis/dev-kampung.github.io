@@ -26,7 +26,7 @@ nav {
     color: var(--text-color);
     width: 100%;
     padding: 0 25px;
-    z-index: 1;
+    z-index: 9;
     /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
     /* box-shadow: 3px 3px 6px 1px black inset,
         -2px -2px 1px 0px black inset, */
@@ -81,13 +81,48 @@ nav ul li a {
 /* ++++++++++++ Home +++++++++++ */
 #home {
     position: relative;
+    position: flex;
     top: 65px;
     width: 100%;
     height: 100vh;
     background-color: var(--bg-light);
     padding: 75px 25px;
+    overflow: hidden;
 }
 
+#home .container {}
+
+#home .line {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    top: -100px;
+    left: 700px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+#home .line .line-1 {
+    position: relative;
+    width: 5px;
+    height: 200%;
+    background-color: var(--text-color);
+    transform: rotate(20deg);
+
+}
+
+#home .line .line-2 {
+    position: relative;
+    width: 9px;
+    height: 200%;
+    background-color: var(--text-color);
+    transform: rotate(20deg);
+}
+
+
+/* ===== text move ===== */
 .text-silent {
     font-size: 1.4em;
     font-weight: 600;
@@ -98,7 +133,7 @@ nav ul li a {
     height: 30px;
     line-height: 30px;
     font-size: 1.1em;
-    font-weight: 6400;
+    font-weight: 400;
     overflow: hidden;
 }
 
@@ -112,11 +147,7 @@ nav ul li a {
     /* margin-bottom: 30px; */
 }
 
-@keyframes slide {
-    100% {
-        top: -90px;
-    }
-}
+
 
 .text-move li span {
     position: relative;
@@ -136,18 +167,44 @@ nav ul li a {
     animation: create-text 5s steps(17) infinite;
 }
 
-@keyframes create-text {
+/* ===== end text move ===== */
 
-    40%,
-    60% {
-        left: calc(100% + 30px);
-    }
-
-    100% {
-        left: 0;
-    }
-
+/* ====== home image ====== */
+#home .image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    height: 40vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
 }
+
+.image .card {
+    position: relative;
+    display: flex;
+    width: 210px;
+    height: 210px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--bg-light);
+    box-shadow: 1px 1px 5px 0 inset rgb(160, 157, 157),
+        /* 1px 1px 1px 0 rgb(160, 157, 157), */
+        /* -1px -1px 1px 0 rgb(160, 157, 157), */
+        -1px -1px 5px 0 inset rgb(160, 157, 157);
+}
+
+.image img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* ====== end home image ====== */
+
 
 
 
@@ -155,6 +212,8 @@ nav ul li a {
 
 /* +++++++++++ desktop ++++++++ */
 @media screen and (min-width: 980px) {
+
+    /* ======= Navbar ====== */
     nav {
         display: flex;
         width: 100%;
@@ -191,6 +250,59 @@ nav ul li a {
         background: red;
         border-radius: 10%;
     } */
+    /* ======= end Navbar ====== */
+
+    /* ====== home section ====== */
+    #home .container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 60vh;
+    }
+
+    #home .container .text {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    #home .container .text .hello {
+        font-size: 1.3em;
+    }
+
+    #home .container .text .container-text {
+        text-align: end;
+    }
+
+    #home .container .text .text-silent {
+        font-size: 2em;
+    }
+
+    #home .container .text .text-move {
+        font-size: 1.7em;
+    }
+
+    .text-move li {
+        margin-bottom: 10px;
+    }
+
+    #home .text-move li span::after {
+        height: 40px;
+    }
+
+    #home .image {
+        height: 60vh;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+
+    /* ====== end home section ====== */
 }
 
 /* +++++++++++ end desktop ++++++++ */

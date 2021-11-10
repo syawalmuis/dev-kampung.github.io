@@ -1,0 +1,33 @@
+/* +++++++++ Text Move +++++++++ */
+@keyframes slide {
+    100% {
+        top: -90px;
+    }
+}
+
+@keyframes create-text {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+
+}
+
+/* +++++++++ End Text Move +++++++++ */
+
+
+@media screen and (min-width: 980px) {
+    @keyframes slide {
+        100% {
+            top: -120px;
+        }
+    }
+
+
+
+}

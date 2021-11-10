@@ -249,6 +249,21 @@ nav ul li a.active::before {
     transform: scale(0.9, 0.9);
 }
 
+/* ========  kotak ===== */
+.kotak {
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 28%;
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+    border: 2px solid rgb(34, 75, 75);
+    animation: kotak 12s infinite;
+}
+
+/* ========  end kotak ===== */
+
 /* ====== end home image ====== */
 
 
@@ -381,6 +396,10 @@ nav ul li a.active::before {
         height: 200%;
         background-color: var(--text-color);
         transform: rotate(20deg);
+    }
+
+    .kotak {
+        display: none;
     }
 
 

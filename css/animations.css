@@ -20,6 +20,36 @@
 
 /* +++++++++ End Text Move +++++++++ */
 
+@keyframes kotak {
+    0% {
+        top: 30%;
+        left: 28%;
+    }
+
+    25% {
+        top: 30%;
+        left: 0;
+    }
+
+    60% {
+        top: 40%;
+        left: 20%;
+    }
+
+    80% {
+        top: 43%;
+        left: 0;
+    }
+
+    100% {
+        top: 30%;
+        left: 28%;
+    }
+
+
+
+
+}
 
 @media screen and (min-width: 980px) {
     @keyframes slide {

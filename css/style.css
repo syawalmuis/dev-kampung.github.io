@@ -3,6 +3,7 @@
 :root {
     --bg-light: #fff;
     --text-color: #95a5a6;
+    --hover-color: #d0dcdd;
 }
 
 * {
@@ -73,8 +74,37 @@ nav ul li a {
     color: var(--text-color);
     font-size: 1.2em;
     font-weight: 300;
+    display: block;
     text-decoration: none;
 }
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* nav ul li a.active {
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    margin: 0 50%;
+    width: 50%;
+    background-color: var(--text-color);
+}
+
+nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: var(--text-color);
+} */
 
 /* +++++++++  End Navbar +++++++++++ */
 
@@ -133,6 +163,8 @@ nav ul li a {
     font-weight: 600;
     letter-spacing: 1.5px;
     z-index: 3;
+    padding-right: 25px;
+    width: max-content;
     background-color: #fff;
     border-radius: 15px;
 }
@@ -290,6 +322,7 @@ nav ul li a {
 
     #home .container .text .text-silent {
         font-size: 2em;
+        padding-right: 0;
     }
 
     #home .container .text .text-move {

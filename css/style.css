@@ -237,11 +237,16 @@ nav ul li a.active::before {
         /* 1px 1px 1px 0 rgb(160, 157, 157), */
         /* -1px -1px 1px 0 rgb(160, 157, 157), */
         -1px -1px 5px 0 inset rgb(160, 157, 157);
+    transition: .6s;
 }
 
 .image img {
     width: 200px;
     border-radius: 50%;
+}
+
+.image .card:hover {
+    transform: scale(0.9, 0.9);
 }
 
 /* ====== end home image ====== */
@@ -342,6 +347,10 @@ nav ul li a.active::before {
         justify-content: flex-start;
         align-items: center;
         padding-left: 20px;
+    }
+
+    .image .card:hover {
+        transform: scale(1.1, 1.1);
     }
 
     #home .line {

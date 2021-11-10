@@ -22,28 +22,28 @@
 
 @keyframes kotak {
     0% {
-        top: 30%;
-        left: 28%;
-    }
-
-    25% {
-        top: 30%;
-        left: 0;
-    }
-
-    60% {
-        top: 40%;
+        top: 59%;
         left: 20%;
     }
 
-    80% {
-        top: 43%;
+    15% {
+        top: 53%;
+        left: 30%
+    }
+
+    60% {
+        top: 79%;
+        left: 47%;
+    }
+
+    75% {
+        top: 70%;
         left: 0;
     }
 
     100% {
-        top: 30%;
-        left: 28%;
+        top: 60%;
+        left: 20%;
     }
 
 

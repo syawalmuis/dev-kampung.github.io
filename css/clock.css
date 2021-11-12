@@ -1,0 +1,176 @@
+:root {
+    --bg-light: #fff;
+    --text-light: #95a5a6;
+    --hover-color: #d0dcdd;
+    --text-dark: #636e72;
+    --bg-dark: #2d3436;
+    --red: #d63031;
+
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-dark);
+    height: 100vh;
+    width: 100%;
+}
+
+.clock-analog {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-light);
+    border-radius: 50%;
+    margin: 25px auto;
+    border: 3px solid var(--bg-light);
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 1px 5px 0 inset var(--text-light),
+        -1px -1px 5px 0 inset var(--text-light);
+
+}
+
+.s-needle {
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    height: 115px;
+    width: 3px;
+    background: var(--red);
+    /* top: 0; */
+    bottom: 122px;
+    box-shadow: 2px 0px 3px 0 var(--text-light);
+    animation: tes 6s infinite;
+    transform-origin: bottom;
+    z-index: 4;
+    transform: rotate(360deg);
+}
+
+.m-needle {
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    height: 115px;
+    width: 4px;
+    background: black;
+    /* top: 0; */
+    bottom: 122px;
+    box-shadow: 2px 0px 2px 0 var(--text-light);
+    transform: rotate(60deg);
+    transform-origin: bottom;
+    z-index: 3;
+}
+
+
+.h-needle {
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    height: 90px;
+    width: 6px;
+    background: black;
+    /* top: 0; */
+    bottom: 122px;
+    box-shadow: 3px 0px 3px 0 var(--text-light);
+    transform: rotate(320deg);
+    transform-origin: bottom;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.clock-time {
+    position: absolute;
+    font-size: 1.3em;
+    text-shadow: 0.75px 0.75px 1px black;
+    z-index: 1;
+}
+
+.at-12 {
+    top: 2px;
+}
+
+.at-6 {
+    bottom: 0;
+}
+
+.at-3 {
+    right: 5px;
+}
+
+.at-9 {
+    left: 5px;
+}
+
+/* not angka utama */
+.at-1 {
+    top: 15px;
+    right: 60px;
+}
+
+.at-2 {
+    right: 20px;
+    top: 55px;
+}
+
+.at-5 {
+    bottom: 15px;
+    right: 60px;
+}
+
+.at-4 {
+    right: 20px;
+    bottom: 55px;
+}
+
+.at-7 {
+    bottom: 15px;
+    left: 60px;
+}
+
+.at-8 {
+    left: 20px;
+    bottom: 55px;
+}
+
+.at-11 {
+    top: 15px;
+    left: 60px;
+}
+
+.at-10 {
+    left: 20px;
+    top: 55px;
+}
+
+
+/* @keyframes tes {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+} */
